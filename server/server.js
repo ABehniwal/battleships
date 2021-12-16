@@ -38,8 +38,8 @@ app.get('/', (req, res) => {
   res.sendFile(path.resolve(__dirname, '../client/index.html'));
 });
 
-app.post('/GamePage.html', (req, res) => {
-	console.log("attempting to redirect");
+app.get('/GamePage.html', (req, res) => {
+	console.log("attempting to connect");
   res.sendFile(path.resolve(__dirname, '../client/html/GamePage.html'));
 });
 
