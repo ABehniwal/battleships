@@ -4,28 +4,18 @@
         <meta charset="UTF-8">
         <title>Battleships</title>
         <!-- Linking to the css code -->
-        <link rel = "stylesheet" href="/main.css">
 </head>
 <body>
     <!-- Main container for the application -->
     <div id = "app"></div>
     <!-- Running the js code -->
-    <script src = "/Main.js" type = "module"></script>
 
+    <h3>Enter your nickname</h3>
+    <form id="form" action="/GamePage.html" method="POST">
+      <input id="input" autocomplete="off" /> <button>Send</button>
+    </form>
 
     <!-- Socket.io -->
     <script src= "/socket.io/socket.io.js"></script>
-    <script>
-        var socket = io();
-        var form = document.getElementById('form');
-        var input = document.getElementById('input');
-
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            if (input.value) {
-              socket.emit('nickname', input.value);
-              input.value = '';
-            }
-        });
-    </script>
+    <script src= "/script.js"></script>
 </body>
